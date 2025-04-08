@@ -167,14 +167,75 @@ Complete Exercise 11 in the space below:
 
 const nums = [100, 5, 23, 15, 21, 72, 9, 45, 66, 7, 81, 90];
 
-const odds = [];
+//USING `for` LOOP
+
+const oddsFor = [];
 
 for (let i = 0; i < nums.length; i++) {
     if (nums[i] % 2 !== 0) {
-    odds.push(nums [i]);;
+    oddsFor.push(nums[i]);
     }
+};
+
+//USING `for...of` LOOOP
+
+const oddsForOf = [];
+
+for (const element of nums) {
+    if (element % 2 !== 0) {
+    oddsForOf.push(element);;
+ }
+};
+
+//USING `forEach()` METHOD
+
+const oddsForEach = [];
+
+nums.forEach((element) => {
+    if (element % 2 !== 0) {
+    oddsForEach.push(element);
 }
+});
 
-console.log('Exercise 11 result:', odds);
+console.log('Exercise 11 "for" result:', oddsFor);
+console.log('Exercise 11 "for...of" result:', oddsForOf);
+console.log('Exercise 11 "forEach()" result:', oddsForEach);
 
+/*
+Exercise 12: FizzBuzz with arrays
+
+1) Choose a method to iterate through the `nums` array. 
+
+2. As you loop, sort the numbers into new arrays based on the following rules:
+
+   - Push any number evenly divisible by 3 to an array called `fizz`.
+   - Push any number evenly divisible by 5 to an array called `buzz`.
+   - Push any number that is evenly divisible by 3 and 5 to an array called
+     `fizzbuzz`.
+
+   Note: A single number may meet more than one of the above rules. If it does,
+         it should be placed in multiple arrays. For example, the number `15`
+         will appear in the `fizz`, `buzz`, and `fizzbuzz` arrays.
+
+Complete Exercise 12 in the space below:
+*/
+
+const fizz = [];
+const buzz = [];
+const fizzbuzz = [];
+
+for (let i = 0; i < nums.length; i++) {
+    if (nums[i] % 3 === 0) {
+        fizz.push(nums[i]);
+    } if (nums[i] % 5 === 0) {
+        buzz.push(nums[i]);
+    } if (nums[i] % 3 === 0 && nums[i] % 5 === 0) {
+        fizzbuzz.push(nums[i]);
+    }
+};
+
+console.log('Exercise 12 Results:');
+console.log('  fizz:', fizz);
+console.log('  buzz:', buzz);
+console.log('  fizzbuzz:', fizzbuzz);
 
